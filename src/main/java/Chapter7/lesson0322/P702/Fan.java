@@ -6,21 +6,21 @@ import static java.awt.Color.blue;
  * Created by xin14.zhang on 2018/3/22.
  */
 public class Fan {
-    final int SLOW = 1;
-    final int MEDIUM = 2;
-    final int FASH = 3;
+    final static int SLOW = 1;
+    final static int MEDIUM = 2;
+    final static int FASH = 3;
     private int speed;
     private boolean on;
     private double radius;
     private String color;
-//    public Fan(){
-//        this(SLOW,false,5,blue);
-//    }
     public Fan(){
-        speed = SLOW;
-        on = false;
-        radius = 5;
-        color = "blue";
+        this(SLOW,5,"blue",false);
+    }
+    public Fan(int speed,double radius,String color,boolean on){
+        this.speed = speed;
+        this.radius = radius;
+        this.color = color;
+        this.on = on;
     }
     public int getSpeed(){
         return speed;
@@ -47,7 +47,10 @@ public class Fan {
         this.color = color;
     }
 
-    public static toString(){
-
-    }
+   public void toString(boolean on){
+       String output = "The speed of Fan is"+speed+",the color of Fan is"+color+
+               ",the radius of the Fan is "+radius;
+       if(on = true)System.out.println(output);
+       else System.out.println("fan is off ,"+output);
+   }
 }
