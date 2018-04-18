@@ -27,9 +27,9 @@ public class Circle extends GeometricObject{
     public void printCircle(){
         System.out.println("The circle is created "+getDateCreated()+" and the radius is "+radius);
     }
-    public void printCircle(){
-        System.out.println("The circle is created "+super.getDateCreated()+" and the radius is "+radius);
-    }
+//    public void printCircle(){
+//        System.out.println("The circle is created "+super.getDateCreated()+" and the radius is "+radius);
+//    }
     //方法的覆盖
     public String toString(){
         return super.toString() + "\nradius is "+radius;
